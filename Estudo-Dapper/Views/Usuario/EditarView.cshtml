@@ -1,0 +1,14 @@
+﻿@model UsuarioModel
+@{
+    ViewData["Title"] = "Editar Usuarido";
+}
+<h1>Editar usuario(a) @Model.Nome </h1>
+<form>
+    <div  class="mb-3">
+        <label asp-for="Nome"></label>
+        <input type="text" asp-for="Nome" value=@Model.Nome/>
+
+    </div>
+
+    <a asp-action="Index">Voltar</a>
+</form>
