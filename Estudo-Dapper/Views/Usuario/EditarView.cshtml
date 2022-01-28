@@ -5,10 +5,41 @@
 <h1>Editar usuario(a) @Model.Nome </h1>
 <form>
     <div  class="mb-3">
-        <label asp-for="Nome"></label>
-        <input type="text" asp-for="Nome" value=@Model.Nome/>
-
+        <label asp-for="Nome" class="form-label"></label>
+        <input type="text" asp-for="Nome" value=@Model.Nome readonly class="form-control"/>
     </div>
+    <div  class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input type="email" asp-for="Email" value=@Model.Email readonly class="form-control"/>
+    </div>
+     <div  class="mb-3">
+        <label asp-for="Sexo" class="form-label"></label>
+        <input type="text" asp-for="Sexo" value=@Model.Sexo readonly class="form-control"/>
+    </div>
+     <div  class="mb-3">
+        <label asp-for="RG" class="form-label"></label>
+        <input type="text" asp-for="RG" value=@Model.RG readonly class="form-control"/>
+    </div>
+     <div  class="mb-3">
+        <label asp-for="CPF" class="form-label"></label>
+        <input type="text" asp-for="CPF" value=@Model.CPF readonly class="form-control"/>
+    </div>
+     <div  class="mb-3">
+        <label asp-for="NomeMae" class="form-label"></label>
+        <input type="text" asp-for="NomeMae" value=@Model.NomeMae readonly class="form-control"/>
+    </div>
+    
+     <div  class="mb-3">
+        <label asp-for="SituacaoCadastro" class="form-label"></label>
+        <input type="text" asp-for="SituacaoCadastro" value=@Model.SituacaoCadastro readonly class="form-control"/>
+    </div>   
+     <div  class="mb-3">
+        <label asp-for="DataCadastro" class="form-label"></label>
+        <input type="datetime-local" asp-for="DataCadastro" value=@Model.DataCadastro readonly class="form-control"/>
+    </div>
+  
 
-    <a asp-action="Index">Voltar</a>
+    <a asp-action="Index" class="btn btn-warning">Voltar</a>
+    <button class="btn btn-secondary" asp-action="UpdateView" asp-route-id="@Model.Id">Editar</button>
+    <a class="btn btn-danger" asp-action="DeletarView" asp-controller="Usuario" asp-route-id="@Model.Id">Deletar</a>
 </form>

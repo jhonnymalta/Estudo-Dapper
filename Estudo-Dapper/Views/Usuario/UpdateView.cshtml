@@ -1,0 +1,44 @@
+﻿@model UsuarioModel
+@{
+    ViewData["Title"] = "Editar Usuarido";
+}
+<h1>Update usuario(a) @Model.Nome </h1>
+<form asp-action="UpdateView">
+    <div  class="mb-3">
+        <label asp-for="Nome" class="form-label"></label>
+        <input type="text" asp-for="Nome" value=@Model.Nome  class="form-control"/>
+    </div>
+    <div  class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input type="email" asp-for="Email" value=@Model.Email  class="form-control"/>
+    </div>
+     <div  class="mb-3">
+        <label asp-for="Sexo" class="form-label"></label>
+        <input type="text" asp-for="Sexo" value=@Model.Sexo  class="form-control"/>
+    </div>
+     <div  class="mb-3">
+        <label asp-for="RG" class="form-label"></label>
+        <input type="text" asp-for="RG" value=@Model.RG  class="form-control"/>
+    </div>
+     <div  class="mb-3">
+        <label asp-for="CPF" class="form-label"></label>
+        <input type="text" asp-for="CPF" value=@Model.CPF  class="form-control"/>
+    </div>
+     <div  class="mb-3">
+        <label asp-for="NomeMae" class="form-label"></label>
+        <input type="text" asp-for="NomeMae" value=@Model.NomeMae  class="form-control"/>
+    </div>
+    
+     <div  class="mb-3">
+        <label asp-for="SituacaoCadastro" class="form-label"></label>
+        <input type="text" asp-for="SituacaoCadastro" value=@Model.SituacaoCadastro  class="form-control"/>
+    </div>   
+     <div  class="mb-3">
+        <label asp-for="DataCadastro" class="form-label"></label>
+        <input type="datetime-local" asp-for="DataCadastro" value=@Model.DataCadastro  class="form-control"/>
+    </div>
+  
+
+    <a asp-action="Index" class="btn btn-warning">Cancelar</a>
+    <button class="btn btn-primary">Atualizar</button>
+</form>
